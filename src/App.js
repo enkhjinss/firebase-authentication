@@ -6,8 +6,10 @@ import "./Login.css";
 const App = () => {
     const [code, setCode] = useState("");
     const [a, setA] = useState(true);
+    
     const recaptchaVerifier = useRef();
     const confirmationResult = useRef();
+
     useEffect(() => {
         recaptchaVerifier.current = new RecaptchaVerifier(
             "recaptcha-container",
